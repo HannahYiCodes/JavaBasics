@@ -42,4 +42,3 @@ public class Main {
 //        public void getMake(String make) { this.make = make; }
 //
 //        public String getTheModel() {return model;}
-//        public void getModel(String model) {this.model = model;}
