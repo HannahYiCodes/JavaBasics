@@ -6,17 +6,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter the car's mileage\nMileage: ");
+        int useInputMileage = scanner.nextInt();
+
+        System.out.println("Enter the car's gas tank percent\nGas Tank: ");
+        int useInputGasTank = scanner.nextInt();
+        scanner.nextLine();
+
         System.out.println("Enter the car make\nMake: ");
         String useInputMake = scanner.nextLine();
 
         System.out.println("Enter the car model\nModel: ");
         String useInputModel = scanner.nextLine();
-
-        System.out.println("Enter the car's mileage\nMileage: ");
-        Integer useInputMileage = scanner.nextInt();
-
-        System.out.println("Enter the car's gas tank percent\nGas Tank: ");
-        Integer useInputGasTank = scanner.nextInt();
 
         createACarObject newestCar = new createACarObject(useInputMake, useInputModel, useInputMileage, useInputGasTank);
         System.out.println("Your new car\n\n" + newestCar);
@@ -26,9 +27,9 @@ public class Main {
         private final String make;
         private final String model;
         private final int mileage;
-        private final float gasTankPercentage;
+        private final int gasTankPercentage;
 
-        public createACarObject(String make, String model, int mileage, float gasTankPercentage) {
+        public createACarObject(String make, String model, int mileage, int gasTankPercentage) {
             this.make = make;
             this.model = model;
             this.mileage = mileage;
@@ -36,7 +37,7 @@ public class Main {
         }
 
         public String toString() {
-            return "This car is a " + make + " " + model + ".\nIts mileage: " + mileage + "\nIts gas is: " + gasTankPercentage + "% full.";
+            return "This car is a " + make + " " + model + ".\nIts mileage: " + mileage + "\nIts gas is " + gasTankPercentage + "% full.";
         }
     }
 }
