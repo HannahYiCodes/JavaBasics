@@ -19,26 +19,27 @@ public class Main {
     }
 
     public static class carCreation {
-        private String owner;
-        private String make;
-        private String model;
+        private final String owner;
+        private final String make;
+        private final String model;
 
         public carCreation(String owner, String make, String model) {
             this.owner = owner;
             this.make = make;
             this.model = model;
         }
-        public String getTheOwner() {return owner;}
-        public void getOwner(String owner) { this.owner = owner; }
-
-        public String getTheMake() {return make;}
-        public void getMake(String make) { this.make = make; }
-
-        public String getTheModel() {return model;}
-        public void getModel(String model) {this.model = model;}
 
         public String toString() {
             return owner + " owns the car " + make + " " + model;
         }
     }
 }
+
+//        public String getTheOwner() {return owner;}
+//        public void getOwner(String owner) { this.owner = owner; }
+//
+//        public String getTheMake() {return make;}
+//        public void getMake(String make) { this.make = make; }
+//
+//        public String getTheModel() {return model;}
+//        public void getModel(String model) {this.model = model;}
