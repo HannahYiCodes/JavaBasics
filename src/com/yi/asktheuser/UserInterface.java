@@ -1,30 +1,45 @@
-package com.yi.asktheuser;
+package com.yi.carfactory;
 
 import java.util.Scanner;
 
-public class UserInterface {
-    private static final Scanner scanner = new Scanner(System.in);
-
+public class Main {
     public static void main(String[] args) {
-        String name = askUserName();
-        int age = askUserAge();
-        System.out.println("Final Report:\nName: " + name +"\nAge: " + age); // after all the questions, it will display this
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the owner's name\nName: ");
+        String useInputOwner = scanner.nextLine();
+
+        System.out.println("Enter the car make\nMake: ");
+        String useInputMake = scanner.nextLine();
+
+        System.out.println("Enter the car model\nModel: ");
+        String useInputModel = scanner.nextLine();
+
+        carCreation newCar = new carCreation(useInputOwner, useInputMake, useInputModel);
+        System.out.println("Your new car\n\n" + newCar);
     }
 
-    private static int askUserAge() {
-        System.out.print("What is your age?\nAge: ");
-        int userAge = scanner.nextInt();
-        System.out.println("Your age; " + userAge);
-        return userAge;
-    }
+    public static class carCreation {
+        private final String owner;
+        private final String make;
+        private final String model;
 
-    private static String askUserName () {
-        System.out.print("What is your name?\nName: ");
-        String userName = scanner.nextLine();
-        System.out.println("Your name; " + userName);
-        return userName;
+        public carCreation(String owner, String make, String model) {
+            this.owner = owner;
+            this.make = make;
+            this.model = model;
+        }
+
+        public String toString() {
+            return owner + " owns the car " + make + " " + model;
+        }
     }
 }
 
-// mutants
-// mutable vs immutable = ability of something to be changed
+//        public String getTheOwner() {return owner;}
+//        public void getOwner(String owner) { this.owner = owner; }
+//
+//        public String getTheMake() {return make;}
+//        public void getMake(String make) { this.make = make; }
+//
+//        public String getTheModel() {return model;}
+//        public void getModel(String model) {this.model = model;}
