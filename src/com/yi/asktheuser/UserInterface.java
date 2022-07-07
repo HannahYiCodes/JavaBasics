@@ -21,9 +21,13 @@ public class UserInterface {
     private static int askUserAge() {
         System.out.print("What is your age?\nAge: ");
         int userAge = scanner.nextInt();
+        if (userAge > 25) {
+            System.out.println("You are " + userAge);
+        }
         System.out.println("Your age: " + userAge);
         return userAge;
     }
+
 
     private static String askUserName() {
         System.out.print("What is your name?\nName: ");
