@@ -6,16 +6,18 @@ public class UserInterface {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String name = askUserName();
-        int age = askUserAge();
-        boolean allergies = askUserAllergy();
+        String theName = askUserName();
+        int theInteger = askUserAge();
+        boolean theBoolean = askUserAllergy();
         byte theByte = askUserByte();
         short theShort = askUserShort();
         float theFloat = askUserFloat();
         long theLong = askUserLong();
         double theDouble = askUserDouble();
 
-        System.out.println("Final Report:\nName: " + name + ".\nAge: " + age + ".\nNut Allergy: " + allergies + ".\nThe Byte: " + theByte + ".\nThe Short: " + theShort + ".\nThe Float: " + theFloat + ".\nThe Long: " + theLong + ".\nThe Double: " + theDouble + "."); // after all the questions, it will display this
+        System.out.println("Final Report:\nName: " + theName + ".\nAge: " + theInteger + ".\nNut Allergy: " + theBoolean + ".\nThe Byte: " + theByte + ".\nThe Short: " + theShort + ".\nThe Float: " + theFloat + ".\nThe Long: " + theLong + ".\nThe Double: " + theDouble + "."); // after all the questions, it will display this
+        UserInterface_3 generatedInfo = new UserInterface_3("Hannah", 25, true, (byte) 8, (short) 30000, 0.25F, 10, 1.79769313486231570);
+
     }
 
     private static int askUserAge() {
@@ -66,7 +68,7 @@ public class UserInterface {
         Long userLong = scanner.nextLong();
         return userLong;
     }
-    // Long Max: -9,223,372,036,854,775,808L, Min: 9,223,372,036,854,775,807L:
+    // Long Min: -9,223,372,036,854,775,808L, Max: 9,223,372,036,854,775,807L:
 
     private static double askUserDouble() {
         System.out.print("Give me a double?\nResponse: ");
