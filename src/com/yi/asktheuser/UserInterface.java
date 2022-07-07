@@ -30,6 +30,7 @@ public class UserInterface {
         return userAge;
     }
 
+
     private static String askUserName() {
         System.out.print("What is your name?\nName: ");
         String userName = scanner.nextLine().trim();
