@@ -86,6 +86,24 @@ public class UI {
             }
         }
     }
+
+    public static float readFloat (String question, float min, float max) {
+        while (true) {
+            try {
+                System.out.println(question + "\n("+min+" - " + max + "): ");
+                float input = scanner.nextFloat();
+                scanner.nextLine();
+                if (input <= max && input >= min) {
+                    return input;
+                } else {
+                    System.out.println("Input must be between " + min + " and " + max);
+                }
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max);
+                scanner.nextLine();
+            }
+        }
+    }
 }
 
 // OTHER METHODS TO REPEAT THE QUESTION UNTIL IT IS ANSWERED WITH THE CORRECT VALUE
