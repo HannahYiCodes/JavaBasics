@@ -74,5 +74,7 @@ public class Dog {
     }
 }
 
+
 //TODO: public static ArrayList<String> readListOfStrings (question, min, max); // OBJECT NAME SELECTION?
 //TODO: public static String selectFromListOfString (question, ArrayList<String>)
+

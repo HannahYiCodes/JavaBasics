@@ -41,6 +41,7 @@ public class Main {
     }
     public static Dog createDog () {
         String dogName = UI.readString("What is your dog's name?");
+
         String dogBreed = UI.readString("What is/are " + dogName + "'s breed(s)?"); // .split(" ")?
         int adoptionDate = UI.readInt("What year did " + dogName + " join your family?", 1900, 2022);
         short dogAge = UI.readShort("How old is " + dogName + "?", (short) 0, (short) 30);// float?
@@ -50,6 +51,17 @@ public class Main {
         char dogOwner = UI.readChar("What is the first letter YOUR initial?");
 
         return new Dog(dogName, dogBreed, adoptionDate, dogAge, dogWeight, dogSex, dogStatus, dogOwner); // Create a form like appearance
+
+        String dogBreed = UI.readString("What is your dog's breed(s)?");
+        int adoptionDate = UI.readInt("What year did you acquire your best friend?", 1900, 9000);
+        short dogAge = UI.readShort("How old is your dog?", (short) 0, (short) 30);
+        short dogWeight = UI.readShort("How many pounds is your dog?", (short) 0, (short) 200);
+        boolean dogSex = UI.readBoolean("Is your dog a male?");
+
+        Dog generatedDog = new Dog(dogName, dogBreed, adoptionDate, dogAge, dogWeight, dogSex);
+        System.out.println(generatedDog);
+
+
     }
 }
 
