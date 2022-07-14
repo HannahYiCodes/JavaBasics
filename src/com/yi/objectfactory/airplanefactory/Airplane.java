@@ -19,6 +19,8 @@ public class Airplane {
         this.isFlying = isFlying;
     }
 
+// POJO Objects: Plain Old Java Objects
+
     public String getModelName() {
         return modelName;
     }
@@ -45,13 +47,13 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
-                "modelName='" + modelName + '\'' +
-                ", tailNumber='" + tailNumber + '\'' +
-                ", passengerCap=" + passengerCap +
-                ", marketValue=" + marketValue +
-                ", gasTank=" + gasTank +
-                ", isFlying=" + isFlying +
-                '}';
+        final StringBuilder sb = new StringBuilder("Airplane{");
+        sb.append("\nModel: '").append(modelName).append('\'');
+        sb.append("\nTail Number: '").append(tailNumber).append('\'');
+        sb.append("\nPassenger Capacity: ").append(passengerCap);
+        sb.append("\nPrice: ").append(marketValue);
+        sb.append("\nFuel %: ").append(gasTank*100).append('%');
+        sb.append("\nThe plane is ").append(isFlying ? "15,000ft in the air!" : "on the ground"); // boolean ternary operator
+        return sb.toString();
     }
 }
