@@ -11,8 +11,11 @@ public class Dog {
     private String dogSex;
     private boolean dogStatus;
     private char dogOwner;
+    private long dogLong;
+    private float dogFood;
+    private byte dogByte;
 
-    public Dog(String dogName, String dogBreed, int adoptionYear, short dogAge, short dogWeight, String dogSex, boolean dogStatus, char dogOwner) {
+    public Dog(String dogName, String dogBreed, int adoptionYear, short dogAge, short dogWeight, String dogSex, boolean dogStatus, char dogOwner, long dogLong, float dogFood, byte byteDogByte) {
         this.dogName = dogName;
         this.dogBreed = dogBreed;
         this.adoptionYear = adoptionYear;
@@ -21,6 +24,9 @@ public class Dog {
         this.dogSex = dogSex;
         this.dogStatus = dogStatus;
         this.dogOwner = dogOwner;
+        this.dogLong = dogLong;
+        this.dogFood = dogFood;
+        this.dogByte = dogByte;
     }
 
     public String getDogName() {
@@ -50,6 +56,8 @@ public class Dog {
     public boolean getDogStatus() { return dogStatus; }
 
     public char getDogOwner() { return dogOwner;}
+    public long getDogLong() { return dogLong; }
+    public getDogFood() { return dogFood; }
 
     @Override
     public String toString() {
