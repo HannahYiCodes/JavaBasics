@@ -30,6 +30,12 @@ public class Main {
 
         School ghs = new School(teacherList, studentList);
 
+        Teacher megan = new Teacher(4, "Megan", 900);
+        ghs.addTeacher(megan);
+
+        Student king = new Student(5, "King", 1);
+        ghs.addStudent(king);
+
         hannah.payFees(2000); // why is fees not casting?
         susan.payFees(3000);
         System.out.println("GHS has earned $" + ghs.getTotalMoneyEarned());
