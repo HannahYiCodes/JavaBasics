@@ -5,8 +5,8 @@ import java.util.List;
 public class School {
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     public School(List<Teacher> teachers, List<Student> students) {
         this.teachers = teachers;
@@ -21,7 +21,7 @@ public class School {
     }
 
     // add a teacher to the school
-    public void addTeacher(Teacher teachers) {
+    public void addTeacher(Teacher teacher) {
         teachers.add(teacher);
     }
 
@@ -31,23 +31,23 @@ public class School {
     }
 
     // add student to school
-    public void addStudent(Student students) {
-        students.add(stduent);
+    public void addStudent(Student student) {
+        students.add(student);
     }
 
     public int getTotalMoneyEarned() {
         return totalMoneyEarned;
     }
 
-    public void setTotalMoneyEarned(int totalMoneyEarned) {
-        this.totalMoneyEarned = totalMoneyEarned;
+    public static void updateTotalMoneyEarned(int moneyEarned) {
+        totalMoneyEarned += moneyEarned;
     }
 
     public int getTotalMoneySpent() {
         return totalMoneySpent;
-    }
+    } // money spent by the school
 
-    public void setTotalMoneySpent(int totalMoneySpent) {
-        this.totalMoneySpent = totalMoneySpent;
+    public static void updateTotalMoneySpent(int moneySpent) {
+        totalMoneyEarned -= moneySpent;
     }
-}
+} // update total money given by school to teachers
