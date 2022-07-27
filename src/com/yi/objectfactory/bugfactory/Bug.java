@@ -6,11 +6,11 @@ public class Bug {
     private short bugLegs;
     private boolean isBugNocturnal;
 
-    public Bug(String bugSpecies, short bugSizeInches, short bugLegs,. boolean isBugNocturnal boolean isBugNocturnal) {
+    public Bug(String bugSpecies, short bugSizeInches, short bugLegs, boolean isBugNocturnal) {
         this.bugSpecies = bugSpecies;
         this.bugSizeInches = bugSizeInches;
         this.bugLegs = bugLegs;
-        this.isBugNocturnal = this.isBugNocturnal;
+        this.isBugNocturnal = isBugNocturnal;
     }
 
     public String getBugSpecies() {
